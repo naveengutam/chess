@@ -1,335 +1,341 @@
 <html>
-    <head>
-    <link rel="stylesheet" href="main.css">
-    <script src="main.js"></script>
-    </head>
-    <body>
-        <title>Chess</title>
-        <div class="board">
-            <div class="block white" id="01" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="WEL1" draggable="true" ondragstart="drag(event)">
-                    <svg class="rook w1">
-                        <path class="body" d="M20 10, L30 40 L30 80, L20 100, L80 100, L70 80, L70 40, L80 10, L60 30, L40 30, Z"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="block black" id="02" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="WCL1" draggable="true" ondragstart="drag(event)">
-                    <svg class="horse w1">
-                        <path d="M20 100, C20 100, 50 70, 20 50, L30 50, L35 30, L40 50, L50 10 L70 50, L80 50, C80 50, 50 70, 80 100, Z" class="body"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="block white" id="03" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="WHS1" draggable="true" ondragstart="drag(event)">
-                    <svg class="camel w1">
-                        <path class="body" d="M20 100, C20 100, 50 50, 30 40, L30 40, L50 10 L70 40, C70 40, 50 50, 80 100, Z"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="block black" id="04" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="WKG" draggable="true" ondragstart="drag(event)">
-                    <svg class="king w1">
-                        <path d="M20 100, C20 100, 50 50, 30 40, L20 40, L10 20, L20 30, L40 30, L50 10, L60 30, L80 30, L90 20, L80 40, L70 40, C70 40, 50 50, 80 100, Z" class="body"></path>
-                    </svg>
-                </div>
-            </div>
 
-<div class="block white" id="05" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="WQN" draggable="true" ondragstart="drag(event)">
-                    <svg class="minister w1">
-                        <path d="M20 100, C20 100, 50 50, 30 40, L20 40, L10 20, L20 30, L80 30, L90 20, L80 40, L70 40, C70 40, 50 50, 80 100, Z" class="body"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="block black" id="06" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="WHS2" draggable="true" ondragstart="drag(event)">
-                    <svg class="camel w1">
-                        <path class="body" d="M20 100, C20 100, 50 50, 30 40, L30 40, L50 10 L70 40, C70 40, 50 50, 80 100, Z"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="block white" id="07" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="WCL2" draggable="true" ondragstart="drag(event)">
-                    <svg class="horse w1">
-                        <path d="M20 100, C20 100, 50 70, 20 50, L30 50, L35 30, L40 50, L50 10 L70 50, L80 50, C80 50, 50 70, 80 100, Z" class="body"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="block black" id="08" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="WEL2" draggable="true" ondragstart="drag(event)">
-                    <svg class="rook w1">
-                        <path class="body" d="M20 10, L30 40 L30 80, L20 100, L80 100, L70 80, L70 40, L80 10, L60 30, L40 30, Z"></path>
-                    </svg>
-                </div>
-            </div>
+<head>
+	<link rel="stylesheet" href="main.css">
+	<script src="main.js">
 
-<div class="block black" id="09" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="WSR1" draggable="true" ondragstart="drag(event)">
-                    <svg class="pawn w1">
-                        <circle r="15px" cx="50px" cy="30px" class="head"></circle>
-                        <path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="block white" id="10" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="WSR2" draggable="true" ondragstart="drag(event)">
-                    <svg class="pawn w1">
-                        <circle r="15px" cx="50px" cy="30px" class="head"></circle>
-                        <path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="block black" id="11" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="WSR3" draggable="true" ondragstart="drag(event)">
-                    <svg class="pawn w1">
-                        <circle r="15px" cx="50px" cy="30px" class="head"></circle>
-                        <path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
-                    </svg>
-                </div>
-            </div>
+	</script>
+</head>
 
-<div class="block white" id="12" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="WSR4" draggable="true" ondragstart="drag(event)">
-                    <svg class="pawn w1">
-                        <circle r="15px" cx="50px" cy="30px" class="head"></circle>
-                        <path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="block black" id="13" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="WSR5" draggable="true" ondragstart="drag(event)">
-                    <svg class="pawn w1">
-                        <circle r="15px" cx="50px" cy="30px" class="head"></circle>
-                        <path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="block white" id="14" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="WSR6" draggable="true" ondragstart="drag(event)">
-                    <svg class="pawn w1">
-                        <circle r="15px" cx="50px" cy="30px" class="head"></circle>
-                        <path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
-                    </svg>
-                </div>
-            </div>
+<body>
+	<title>Chess</title>
+	<div class="board">
+		<div class="block white" id="01" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="WEL1" draggable="true" ondragstart="drag(event)">
+				<svg class="rook w1">
+					<path class="body" d="M20 10, L30 40 L30 80, L20 100, L80 100, L70 80, L70 40, L80 10, L60 30, L40 30, Z"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="block black" id="02" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="WCL1" draggable="true" ondragstart="drag(event)">
+				<svg class="horse w1">
+					<path d="M20 100, C20 100, 50 70, 20 50, L30 50, L35 30, L40 50, L50 10 L70 50, L80 50, C80 50, 50 70, 80 100, Z" class="body"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="block white" id="03" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="WHS1" draggable="true" ondragstart="drag(event)">
+				<svg class="camel w1">
+					<path class="body" d="M20 100, C20 100, 50 50, 30 40, L30 40, L50 10 L70 40, C70 40, 50 50, 80 100, Z"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="block black" id="04" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="WKG" draggable="true" ondragstart="drag(event)">
+				<svg class="king w1">
+					<path d="M20 100, C20 100, 50 50, 30 40, L20 40, L10 20, L20 30, L40 30, L50 10, L60 30, L80 30, L90 20, L80 40, L70 40, C70 40, 50 50, 80 100, Z"
+					 class="body"></path>
+				</svg>
+			</div>
+		</div>
 
-<div class="block black" id="15" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="WSR7" draggable="true" ondragstart="drag(event)">
-                    <svg class="pawn w1">
-                        <circle r="15px" cx="50px" cy="30px" class="head"></circle>
-                        <path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="block white" id="16" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="WSR8" draggable="true" ondragstart="drag(event)">
-                    <svg class="pawn w1">
-                        <circle r="15px" cx="50px" cy="30px" class="head"></circle>
-                        <path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="block white" id="17" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block black" id="18" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block white" id="19" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block black" id="20" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block white" id="21" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block black" id="22" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block white" id="23" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block black" id="24" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block white" id="05" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="WQN" draggable="true" ondragstart="drag(event)">
+				<svg class="minister w1">
+					<path d="M20 100, C20 100, 50 50, 30 40, L20 40, L10 20, L20 30, L80 30, L90 20, L80 40, L70 40, C70 40, 50 50, 80 100, Z"
+					 class="body"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="block black" id="06" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="WHS2" draggable="true" ondragstart="drag(event)">
+				<svg class="camel w1">
+					<path class="body" d="M20 100, C20 100, 50 50, 30 40, L30 40, L50 10 L70 40, C70 40, 50 50, 80 100, Z"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="block white" id="07" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="WCL2" draggable="true" ondragstart="drag(event)">
+				<svg class="horse w1">
+					<path d="M20 100, C20 100, 50 70, 20 50, L30 50, L35 30, L40 50, L50 10 L70 50, L80 50, C80 50, 50 70, 80 100, Z" class="body"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="block black" id="08" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="WEL2" draggable="true" ondragstart="drag(event)">
+				<svg class="rook w1">
+					<path class="body" d="M20 10, L30 40 L30 80, L20 100, L80 100, L70 80, L70 40, L80 10, L60 30, L40 30, Z"></path>
+				</svg>
+			</div>
+		</div>
 
-<div class="block black" id="25" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block white" id="26" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block black" id="27" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block white" id="28" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block black" id="29" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block white" id="30" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block black" id="31" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block white" id="32" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block white" id="33" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block black" id="34" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block white" id="35" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block black" id="36" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block white" id="37" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block black" id="38" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block white" id="39" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block black" id="40" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block black" id="41" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block white" id="42" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block black" id="43" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block white" id="44" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block black" id="45" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block white" id="46" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block black" id="47" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="block white" id="48" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block black" id="09" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="WSR1" draggable="true" ondragstart="drag(event)">
+				<svg class="pawn w1">
+					<circle r="15px" cx="50px" cy="30px" class="head"></circle>
+					<path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="block white" id="10" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="WSR2" draggable="true" ondragstart="drag(event)">
+				<svg class="pawn w1">
+					<circle r="15px" cx="50px" cy="30px" class="head"></circle>
+					<path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="block black" id="11" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="WSR3" draggable="true" ondragstart="drag(event)">
+				<svg class="pawn w1">
+					<circle r="15px" cx="50px" cy="30px" class="head"></circle>
+					<path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
+				</svg>
+			</div>
+		</div>
 
-<div class="block white" id="49" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="BSR2" draggable="true" ondragstart="drag(event)">
-                    <svg class="pawn b1">
-                        <circle r="15px" cx="50px" cy="30px" class="head"></circle>
-                        <path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="block black" id="50" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="BSR1" draggable="true" ondragstart="drag(event)">
-                    <svg class="pawn b1">
-                        <circle r="15px" cx="50px" cy="30px" class="head"></circle>
-                        <path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="block white" id="51" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="BSR4" draggable="true" ondragstart="drag(event)">
-                    <svg class="pawn b1">
-                        <circle r="15px" cx="50px" cy="30px" class="head"></circle>
-                        <path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
-                    </svg>
-                </div>
-            </div>
+		<div class="block white" id="12" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="WSR4" draggable="true" ondragstart="drag(event)">
+				<svg class="pawn w1">
+					<circle r="15px" cx="50px" cy="30px" class="head"></circle>
+					<path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="block black" id="13" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="WSR5" draggable="true" ondragstart="drag(event)">
+				<svg class="pawn w1">
+					<circle r="15px" cx="50px" cy="30px" class="head"></circle>
+					<path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="block white" id="14" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="WSR6" draggable="true" ondragstart="drag(event)">
+				<svg class="pawn w1">
+					<circle r="15px" cx="50px" cy="30px" class="head"></circle>
+					<path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
+				</svg>
+			</div>
+		</div>
 
-<div class="block black" id="52" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="BSR3" draggable="true" ondragstart="drag(event)">
-                    <svg class="pawn b1">
-                        <circle r="15px" cx="50px" cy="30px" class="head"></circle>
-                        <path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="block white" id="53" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="BSR5" draggable="true" ondragstart="drag(event)">
-                    <svg class="pawn b1">
-                        <circle r="15px" cx="50px" cy="30px" class="head"></circle>
-                        <path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="block black" id="54" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="BSR6" draggable="true" ondragstart="drag(event)">
-                    <svg class="pawn b1">
-                        <circle r="15px" cx="50px" cy="30px" class="head"></circle>
-                        <path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
-                    </svg>
-                </div>
-            </div>
+		<div class="block black" id="15" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="WSR7" draggable="true" ondragstart="drag(event)">
+				<svg class="pawn w1">
+					<circle r="15px" cx="50px" cy="30px" class="head"></circle>
+					<path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="block white" id="16" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="WSR8" draggable="true" ondragstart="drag(event)">
+				<svg class="pawn w1">
+					<circle r="15px" cx="50px" cy="30px" class="head"></circle>
+					<path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="block white" id="17" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block black" id="18" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block white" id="19" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block black" id="20" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block white" id="21" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block black" id="22" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block white" id="23" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block black" id="24" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block black" id="25" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block white" id="26" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block black" id="27" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block white" id="28" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block black" id="29" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block white" id="30" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block black" id="31" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block white" id="32" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block white" id="33" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block black" id="34" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block white" id="35" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block black" id="36" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block white" id="37" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block black" id="38" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block white" id="39" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block black" id="40" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block black" id="41" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block white" id="42" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block black" id="43" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block white" id="44" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block black" id="45" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block white" id="46" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block black" id="47" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block white" id="48" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="block white" id="49" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="BSR2" draggable="true" ondragstart="drag(event)">
+				<svg class="pawn b1">
+					<circle r="15px" cx="50px" cy="30px" class="head"></circle>
+					<path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="block black" id="50" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="BSR1" draggable="true" ondragstart="drag(event)">
+				<svg class="pawn b1">
+					<circle r="15px" cx="50px" cy="30px" class="head"></circle>
+					<path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="block white" id="51" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="BSR4" draggable="true" ondragstart="drag(event)">
+				<svg class="pawn b1">
+					<circle r="15px" cx="50px" cy="30px" class="head"></circle>
+					<path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
+				</svg>
+			</div>
+		</div>
 
-<div class="block white" id="55" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="BSR7" draggable="true" ondragstart="drag(event)">
-                    <svg class="pawn b1">
-                        <circle r="15px" cx="50px" cy="30px" class="head"></circle>
-                        <path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="block black" id="56" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="BSR8" draggable="true" ondragstart="drag(event)">
-                    <svg class="pawn b1">
-                        <circle r="15px" cx="50px" cy="30px" class="head"></circle>
-                        <path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="block black" id="57" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="BEL1" draggable="true" ondragstart="drag(event)">
-                    <svg class="rook b1">
-                        <path class="body" d="M20 10, L30 40 L30 80, L20 100, L80 100, L70 80, L70 40, L80 10, L60 30, L40 30, Z"></path>
-                    </svg>
-                </div>
-            </div>
+		<div class="block black" id="52" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="BSR3" draggable="true" ondragstart="drag(event)">
+				<svg class="pawn b1">
+					<circle r="15px" cx="50px" cy="30px" class="head"></circle>
+					<path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="block white" id="53" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="BSR5" draggable="true" ondragstart="drag(event)">
+				<svg class="pawn b1">
+					<circle r="15px" cx="50px" cy="30px" class="head"></circle>
+					<path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="block black" id="54" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="BSR6" draggable="true" ondragstart="drag(event)">
+				<svg class="pawn b1">
+					<circle r="15px" cx="50px" cy="30px" class="head"></circle>
+					<path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
+				</svg>
+			</div>
+		</div>
 
-<div class="block white" id="58" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="BCL1" draggable="true" ondragstart="drag(event)">
-                    <svg class="horse b1">
-                        <path d="M20 100, C20 100, 50 70, 20 50, L30 50, L35 30, L40 50, L50 10 L70 50, L80 50, C80 50, 50 70, 80 100, Z" class="body"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="block black" id="59" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="BHS1" draggable="true" ondragstart="drag(event)">
-                    <svg class="camel b1">
-                        <path class="body" d="M20 100, C20 100, 50 50, 30 40, L30 40, L50 10 L70 40, C70 40, 50 50, 80 100, Z"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="block white" id="60" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="BQN" draggable="true" ondragstart="drag(event)">
-                    <svg class="minister b1">
-                        <path d="M20 100, C20 100, 50 50, 30 40, L20 40, L10 20, L20 30, L80 30, L90 20, L80 40, L70 40, C70 40, 50 50, 80 100, Z" class="body"></path>
-                    </svg>
-                </div>
-            </div>
+		<div class="block white" id="55" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="BSR7" draggable="true" ondragstart="drag(event)">
+				<svg class="pawn b1">
+					<circle r="15px" cx="50px" cy="30px" class="head"></circle>
+					<path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="block black" id="56" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="BSR8" draggable="true" ondragstart="drag(event)">
+				<svg class="pawn b1">
+					<circle r="15px" cx="50px" cy="30px" class="head"></circle>
+					<path class="body" d="M35 35, C35 35, 60 50, 30 100, L70 100, C70 100, 40 50, 80 30, C60 30, 50 50, 40 40"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="block black" id="57" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="BEL1" draggable="true" ondragstart="drag(event)">
+				<svg class="rook b1">
+					<path class="body" d="M20 10, L30 40 L30 80, L20 100, L80 100, L70 80, L70 40, L80 10, L60 30, L40 30, Z"></path>
+				</svg>
+			</div>
+		</div>
 
-<div class="block black" id="61" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="BKG" draggable="true" ondragstart="drag(event)">
-                    <svg class="king b1">
-                        <path d="M20 100, C20 100, 50 50, 30 40, L20 40, L10 20, L20 30, L40 30, L50 10, L60 30, L80 30, L90 20, L80 40, L70 40, C70 40, 50 50, 80 100, Z" class="body"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="block white" id="62" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="BHS2" draggable="true" ondragstart="drag(event)">
-                    <svg class="camel b1">
-                        <path class="body" d="M20 100, C20 100, 50 50, 30 40, L30 40, L50 10 L70 40, C70 40, 50 50, 80 100, Z"></path>
-                    </svg>
-                </div>
-            </div>
-            <div class="block black" id="63" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="BCL2" draggable="true" ondragstart="drag(event)">
-                    <svg class="horse b1">
-                        <path d="M20 100, C20 100, 50 70, 20 50, L30 50, L35 30, L40 50, L50 10 L70 50, L80 50, C80 50, 50 70, 80 100, Z" class="body"></path>
-                    </svg>
-                </div>
-            </div>
+		<div class="block white" id="58" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="BCL1" draggable="true" ondragstart="drag(event)">
+				<svg class="horse b1">
+					<path d="M20 100, C20 100, 50 70, 20 50, L30 50, L35 30, L40 50, L50 10 L70 50, L80 50, C80 50, 50 70, 80 100, Z" class="body"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="block black" id="59" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="BHS1" draggable="true" ondragstart="drag(event)">
+				<svg class="camel b1">
+					<path class="body" d="M20 100, C20 100, 50 50, 30 40, L30 40, L50 10 L70 40, C70 40, 50 50, 80 100, Z"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="block white" id="60" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="BQN" draggable="true" ondragstart="drag(event)">
+				<svg class="minister b1">
+					<path d="M20 100, C20 100, 50 50, 30 40, L20 40, L10 20, L20 30, L80 30, L90 20, L80 40, L70 40, C70 40, 50 50, 80 100, Z"
+					 class="body"></path>
+				</svg>
+			</div>
+		</div>
 
-<div class="block white" id="64" ondragover="allowDrop(event)" ondrop="drop(event)">
-                <div class="coins" id="BEL2" draggable="true" ondragstart="drag(event)">
-                    <svg class="rook b1">
-                        <path class="body" d="M20 10, L30 40 L30 80, L20 100, L80 100, L70 80, L70 40, L80 10, L60 30, L40 30, Z"></path>
-                    </svg>
-                </div>
-            </div>
-        </div>
+		<div class="block black" id="61" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="BKG" draggable="true" ondragstart="drag(event)">
+				<svg class="king b1">
+					<path d="M20 100, C20 100, 50 50, 30 40, L20 40, L10 20, L20 30, L40 30, L50 10, L60 30, L80 30, L90 20, L80 40, L70 40, C70 40, 50 50, 80 100, Z"
+					 class="body"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="block white" id="62" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="BHS2" draggable="true" ondragstart="drag(event)">
+				<svg class="camel b1">
+					<path class="body" d="M20 100, C20 100, 50 50, 30 40, L30 40, L50 10 L70 40, C70 40, 50 50, 80 100, Z"></path>
+				</svg>
+			</div>
+		</div>
+		<div class="block black" id="63" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="BCL2" draggable="true" ondragstart="drag(event)">
+				<svg class="horse b1">
+					<path d="M20 100, C20 100, 50 70, 20 50, L30 50, L35 30, L40 50, L50 10 L70 50, L80 50, C80 50, 50 70, 80 100, Z" class="body"></path>
+				</svg>
+			</div>
+		</div>
 
-<div class="graves g1">
-            <div class="grave" id="whitegrave1" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="whitegrave2" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="whitegrave3" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="whitegrave4" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="whitegrave5" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="whitegrave6" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="whitegrave7" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="whitegrave8" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-</div>
+		<div class="block white" id="64" ondragover="allowDrop(event)" ondrop="drop(event)">
+			<div class="coins" id="BEL2" draggable="true" ondragstart="drag(event)">
+				<svg class="rook b1">
+					<path class="body" d="M20 10, L30 40 L30 80, L20 100, L80 100, L70 80, L70 40, L80 10, L60 30, L40 30, Z"></path>
+				</svg>
+			</div>
+		</div>
+	</div>
 
-<div class="grave" id="whitegrave9" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="whitegrave10" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="whitegrave11" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="whitegrave12" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="whitegrave13" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="whitegrave14" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="whitegrave15" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="whitegrave16" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-        </div>
-        <div class="graves g2">
-            <div class="grave" id="blackgrave1" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="blackgrave2" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="blackgrave3" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="blackgrave4" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+	<div class="graves g1">
+		<div class="grave" id="whitegrave1" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="grave" id="whitegrave2" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="grave" id="whitegrave3" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="grave" id="whitegrave4" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="grave" id="whitegrave5" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="grave" id="whitegrave6" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="grave" id="whitegrave7" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="grave" id="whitegrave8" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+	</div>
 
-<div class="grave" id="blackgrave5" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="blackgrave6" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="blackgrave7" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="blackgrave8" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="blackgrave9" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="blackgrave10" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="blackgrave11" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="blackgrave12" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="blackgrave13" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="blackgrave14" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="blackgrave15" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-            <div class="grave" id="blackgrave16" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
-        </div>
+	<div class="grave" id="whitegrave9" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+	<div class="grave" id="whitegrave10" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+	<div class="grave" id="whitegrave11" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+	<div class="grave" id="whitegrave12" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+	<div class="grave" id="whitegrave13" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+	<div class="grave" id="whitegrave14" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+	<div class="grave" id="whitegrave15" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+	<div class="grave" id="whitegrave16" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+	</div>
+	<div class="graves g2">
+		<div class="grave" id="blackgrave1" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="grave" id="blackgrave2" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="grave" id="blackgrave3" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="grave" id="blackgrave4" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="grave" id="blackgrave5" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="grave" id="blackgrave6" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="grave" id="blackgrave7" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="grave" id="blackgrave8" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="grave" id="blackgrave9" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="grave" id="blackgrave10" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="grave" id="blackgrave11" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="grave" id="blackgrave12" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="grave" id="blackgrave13" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="grave" id="blackgrave14" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="grave" id="blackgrave15" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+		<div class="grave" id="blackgrave16" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+	</div>
 
-    </body>
+</body>
+
 </html>
