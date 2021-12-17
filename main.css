@@ -1,99 +1,99 @@
-* {
-    box-sizing: border-box;
-    user-select: none;
-}
+            * {
+                box-sizing: border-box;
+                user-select: none;
+            }
 
-.board {
-    width: 810px;
-    height: 810px;
-    position: relative;
-    box-sizing: border-box;
-    margin: auto;
-    border: 5px solid rgb(60 60 60);
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto;
-    grid-template-rows: auto auto auto auto auto auto auto auto;
-}
+            .board {
+                width: 810px;
+                height: 810px;
+                position: relative;
+                box-sizing: border-box;
+                margin: auto;
+                border: 5px solid rgb(60 60 60);
+                display: grid;
+                grid-template-columns: auto auto auto auto auto auto auto auto;
+                grid-template-rows: auto auto auto auto auto auto auto auto;
+            }
 
-.block {
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-    position: relative;
-    top: 0px;
-    left: 0px;
-}
+            .block {
+                width: 100px;
+                height: 100px;
+                overflow: hidden;
+                position: relative;
+                top: 0px;
+                left: 0px;
+            }
 
-.black {
-    background-color: rgb(170 170 170);
-}
+            .black {
+                background-color: rgb(170 170 170);
+            }
 
-.whitegrave {
-    position: absolute;
-    left: 10px;
-    bottom: 10px;
-    border: 1px solid rgb(60 60 60);
-}
+            .whitegrave {
+                position: absolute;
+                left: 10px;
+                bottom: 10px;
+                border: 1px solid rgb(60 60 60);
+            }
 
-.blackgrade {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-}
+            .blackgrade {
+                position: absolute;
+                right: 10px;
+                bottom: 10px;
+            }
 
-.coins {
-    width: 100px;
-    height: 100px;
-    font-size: 60px;
-    text-align: center;
-    padding: 10px;
-}
+            .coins {
+                width: 100px;
+                height: 100px;
+                font-size: 60px;
+                text-align: center;
+                padding: 10px;
+            }
 
-svg {
-    width: 100px;
-    height: 100px;
-    fill: none;
-    stroke: rgb(68, 68, 68);
-    stroke-width: 3;
-    padding: 0px;
-    margin: 0px;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-}
+            svg {
+                width: 100px;
+                height: 100px;
+                fill: none;
+                stroke: rgb(68, 68, 68);
+                stroke-width: 3;
+                padding: 0px;
+                margin: 0px;
+                position: absolute;
+                left: 0px;
+                top: 0px;
+            }
 
-svg:hover {
-    cursor: grab;
-}
+            svg:hover {
+                cursor: grab;
+            }
 
-.w1 {
-    margin: 0px;
-    padding: 0px;
-}
+            .w1 {
+                margin: 0px;
+                padding: 0px;
+            }
 
-.w1 > .body {
-    fill: rgb(102, 102, 102);
-    stroke: rgb(60, 60, 60);
-}
+.w1 .body {
+                fill: rgb(102, 102, 102);
+                stroke: rgb(60, 60, 60);
+            }
 
-.w1 > .head {
-    fill: rgb(255, 255, 255);
-}
+            .w1 > .head {
+                fill: rgb(255, 255, 255);
+            }
 
-.b1 > .head {
-    fill: rgb(255, 255, 255);
-}
+            .b1 > .head {
+                fill: rgb(255, 255, 255);
+            }
 
-.b1 > .body {
-    fill: rgb(200, 200, 200);
-    stroke: rgb(60, 60, 60);
-}
+            .b1 > .body {
+                fill: rgb(200, 200, 200);
+                stroke: rgb(60, 60, 60);
+            }
 
-.grave {
-    width: 100px;
-    height: 100px;
-    border: 1px solid rgb(50, 50, 50);
-    margin: 5px;
-    float: left;
-    padding: 0px;
-}
+            .grave {
+                width: 100px;
+                height: 100px;
+                border: 1px solid rgb(50, 50, 50);
+                margin: 5px;
+                float: left;
+                padding: 0px;
+            }
